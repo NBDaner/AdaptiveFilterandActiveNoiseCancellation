@@ -102,34 +102,34 @@ toc
 % 画出输入信号、参考信号、滤波输出、误差
 figure()
 subplot(4,2,1)
-plot([1:length(x)]/fs,x);
+plot((1:length(x))/fs,x);
 xlabel('time');
 title('x(n)');
 subplot(4,2,2)
-plot([1:length(d)]/fs,d);
+plot((1:length(d))/fs,d);
 xlabel('time');
 title('d(n)');
 subplot(4,2,3)
-plot([1:length(y1)]/fs,y1);
+plot((1:length(y1))/fs,y1);
 xlabel('time');
 title('LMS y(n)');
 subplot(4,2,5)
-plot([1:length(y2)]/fs,y2);
+plot((1:length(y2))/fs,y2);
 xlabel('time');
 title('NLMS y(n)');
 subplot(4,2,7)
-plot([1:length(y3)]/fs,y3);
+plot((1:length(y3))/fs,y3);
 xlabel('time');
 title('RLS y(n)');
 subplot(4,2,4)
-plot([1:length(e1)]/fs,e1);
+plot((1:length(e1))/fs,e1);
 xlabel('time');
 title('LMS e(n)');
 subplot(4,2,6)
-plot([1:length(e2)]/fs,e2);
+plot((1:length(e2))/fs,e2);
 xlabel('time');
 title('NLMS e(n)');
 subplot(4,2,8)
-plot([1:length(e3)]/fs,e3);
+plot((1:length(e3))/fs,e3);
 xlabel('time');
 title('RLS e(n)');
