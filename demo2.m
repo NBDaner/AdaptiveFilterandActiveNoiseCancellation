@@ -33,7 +33,7 @@ close all;clear;clc;
 
 %% 1、audio + white noise（音频+白噪声）
 [signal,fs] = audioread('handel.wav');
-noise = wgn(length(signal), 1, -20);
+noise = wgn(length(signal), 1, -20); %产生高斯白噪声的函数 -20dBW
 d = signal + noise;
 x = sin(1./(1+exp(-noise)));
 mu =  0.1;
@@ -60,6 +60,7 @@ M = 20;
 
 
 % run algorithm (运行算法)
+%利用tic toc来记录时间
 tic
 [e1, y1, w1] = myLMS(d, x, mu, M);
 toc
@@ -135,4 +136,4 @@ title('RLS ANC输出')
 % SNR3 = snr(xx1,ee3)
 
 %% 试听RLS ANC的输出结果（RLS效果最好）
-sound(d-y1,fs);
+sound(e3,fs);
