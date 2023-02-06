@@ -136,4 +136,4 @@ title('RLS ANC输出')
 % SNR3 = snr(xx1,ee3)
 
 %% 试听RLS ANC的输出结果（RLS效果最好）
-sound(e3,fs);
+sound(y3,fs);

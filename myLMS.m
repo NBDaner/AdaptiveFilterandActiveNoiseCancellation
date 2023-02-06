@@ -13,7 +13,7 @@
 % d  - the vector of desired signal samples of size Ns, 参考信号
 % x  - the vector of input signal samples of size Ns, 输入信号
 % mu - the stepsize parameter, 步长
-% M  - the number of taps. 滤波器阶数
+% M  - the number of taps. 滤波器阶数/抽头数
 %
 % Outputs:
 % e - the output error vector of size Ns
