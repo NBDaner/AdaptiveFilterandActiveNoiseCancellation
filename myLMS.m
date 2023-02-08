@@ -33,18 +33,18 @@ if (Ns ~= length(x))
     return; 
 end
 
-x = x; 
 xx = zeros(M,1);
 w1 = zeros(M,1);
 y = zeros(Ns,1);
 e = zeros(Ns,1);
 
 for n = 1:Ns
-    xx = [xx(2:M);x(n)];
-    y(n) = w1' * xx;
-    e(n) = d(n) - y(n);
-    w1 = w1 + mu * e(n) * xx;
-    w(:,n) = w1;
+    xx = [xx(2:M);x(n)];  %xx(2:M)表示从第二个元素到第M个元素  列向量所以用;
+    y(n) = w1' * xx;   %W1'表示W1的转置矩阵（1,M）* （M,1）
+    e(n) = d(n) - y(n);%e(n)表示还原对音频数据
+    w1 = w1 + mu * e(n) * xx; %不断更新权重向量
+
+    w(:,n) = w1;%滤波器的参数  没有实质意义的一步
 end
 
 end
